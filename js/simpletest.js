@@ -1,25 +1,53 @@
 // List of quastions 
 var quastions = [{
-  quastion: 'What is the result of "2 + 2"?',
-  option: ['Correct answer is: 1', 
-           'Correct answer is: 4', 
-           'Correct answer is: 8', 
-           'Correct answer is: 12'],
+  quastion: 'З якого міста походить The Beatles?',
+  option: ['Манчестер', 
+           'Ліверпуль', 
+           'Лондон', 
+           'Оксфорд'],
   correct: 1
 }, {
-  quastion: 'What is the result of "3 + 4"?',
-  option: ['Correct answer is: 3', 
-           'Correct answer is: 5', 
-           'Correct answer is: 7', 
-           'Correct answer is: 12'],
+  quastion: 'Як називався дебютний студійний альбом "ліверпульської четвірки"?',
+  option: ['Please Please Me', 
+           'A Hard Day’s Night', 
+           'Rubber Soul', 
+           'Sgt. Pepper’s Lonely Hearts Club Band'],
+  correct: 0
+}, {
+  quastion: 'У якому році було створено гурт The Beatles',
+  option: ['1950', 
+           '1954', 
+           '1960', 
+           '1971'],
   correct: 2
 }, {
-  quastion: 'What is the result of "20 + 11"?',
-  option: ['Correct answer is: 31', 
-           'Correct answer is: 58', 
-           'Correct answer is: 60', 
-           'Correct answer is: 71'],
+  quastion: 'Хто приєднався до The Beatles тільки у 1962р?',
+  option: ['Джон Леннон', 
+           'Пол Маккартні', 
+           'Джордж Гаррісон', 
+           'Рінго Стар'],
+  correct: 3
+}, {
+  quastion: 'Як називався перший фільм за участю The Beatles?',
+  option: ['Британське вторгнення', 
+           'Ліверпульська історія', 
+           'Вечір важкого дня', 
+           'Револьвер'],
+  correct: 2
+}, {
+  quastion: 'Хто написав більшість пісень із репертуару гурту?',
+  option: ['Джон Леннон і Пол Маккартні', 
+           'Пол Маккартні і Джордж Гаррісон', 
+           'Рінго Стар і Джордж Гаррісон', 
+           'Рінго Стар і Джон Леннон'],
   correct: 0
+}, {
+  quastion: 'Якою була робоча назва пісні "Yesterday" авторства Пола Маккартні?',
+  option: ['Завтра', 
+           'Яєчня', 
+           'Початок', 
+           'Гідрант'],
+  correct: 1
 }];
 
 
@@ -35,7 +63,7 @@ var questianPageTmpl = _.template('<div class="block-quastion"><h1><%= quastion 
 </ul></div><div class="next-button"><a href="#"><span>next</span></a></div>');
 
 // underscore template for final page
-var finalnPageTmpl = _.template('<div class="final-info"><span>You gave <%= result %> from <%= totalQuastion %> correct answers</span></div><div class="next-button"><a href="#"><span>back to main page</span></a></div>');
+var finalnPageTmpl = _.template('<div class="final-info"><span>Ви дали <%= result %> з <%= totalQuastion %> правильних відповідей</span></div><div class="next-button"><a href="index.html"><span>back to main page</span></a></div>');
 
 
 
