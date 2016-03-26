@@ -56,7 +56,7 @@ var simpleQuiz = $('#simple-quiz'); // container for rendered info
 var correctAnswers = 0; //counter of the correct answers
 
 // underscore template for quastion page
-var questianPageTmpl = _.template('<div class="block-quastion"><h1><%= quastion %></h1></div>\
+var quastionPageTmpl = _.template('<div class="block-quastion"><h1><%= quastion %></h1></div>\
 <div id="options" class="block-options"><ul>\
 <% _.each(options, function(option, iterator)\
 {%> <li id=<%= iterator %>> <span class="glyphicon glyphicon-unchecked"></span> <%= option %></li> <%})%>\
@@ -115,7 +115,7 @@ function nextPageEvent() {
     // delegate click event each time new page is loaded
     $( "#simple-quiz").delegate( '#options li', 'click', optionChooseEvent);
     //simpleQuiz.html(''); // if add this one we receive empty table at the end 
-    renderQuastionPage(questianPageTmpl, quastions, quastionCounter);
+    renderQuastionPage(quastionPageTmpl, quastions, quastionCounter);
   } else {
     renderFinalPage(finalnPageTmpl, quastions)
   };
@@ -137,7 +137,7 @@ $( "#simple-quiz").delegate( ".next-button", 'click', nextPageEvent);
 
 
 
-renderQuastionPage(questianPageTmpl, quastions, quastionCounter)
+renderQuastionPage(quastionPageTmpl, quastions, quastionCounter)
 
 
 /*

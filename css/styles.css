@@ -13,6 +13,11 @@ a, a:hover, a:focus {
   text-decoration: none;
 }
 
+:disabled {
+  background: none;
+  cursor: default !important;
+}
+
 /* H E A D E R */
 
 .logo {
