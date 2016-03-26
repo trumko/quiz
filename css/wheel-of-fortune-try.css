@@ -1,0 +1,55 @@
+.body-quiz {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(210,110,110);
+}
+
+.card-wrap { 
+  width: 100px;
+  height: 150px;
+  perspective: 800px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.card-block {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card-block div {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  text-align: center;
+  font-weight: bold;
+  font-size: 100px;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center;
+}
+
+.card-block .front-side {
+  background: black;
+  color: #454545;
+}
+
+.card-block .back-side {
+  background: #fff;
+  color: #454545;
+  transform: rotateY( -180deg );
+}
+
+.card-block.flipped {
+  transform: rotateY( -180deg );
+}
+
+.front-side {
+  cursor: pointer;
+}
