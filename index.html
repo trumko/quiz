@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myApp" ng-controller="namesCtrl">
 <head>
   <meta charset="utf-8">
   <title>Document One</title>
@@ -26,65 +26,28 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="form-group">
-            <input type="text" class="form-control main-search" placeholder="search">
+            <input ng-model="block.h1" type="text" class="form-control main-search" placeholder="search">
           </div>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-lg-4 col-sm-6 block">
-          <a href="simple-test.html">
-            <div class="item" style="background-image: url(img/item_music.jpg)">
+        <div ng-repeat="x in names | filter:block" class="col-lg-4 col-sm-6 block">
+          <a href="{{x.url}}">
+            <div class="item" style="background-image: url({{x.image}})">
 
-                <span class="rubric">музика</span>
-                <h1>The Beatles: найвідоміший гурт в історії людства</h1>
-                <span class="quastions"> 7 запитань</span>
+                <span class="rubric">{{x.rubric}}</span>
+                <h1>{{x.h1}}</h1>
+                <span class="quastions"> {{x.quastions}}</span>
                 <span class="quastions-type">
-                  <span class="glyphicon glyphicon-check"></span>
+                  <span class="{{x.type}}"></span>
                 </span>
             </div>
           </a>
         </div>
 
 
-        <div class="col-lg-4 col-sm-6 block">
-          <a href="wheel-of-fortune.html">
-            <div class="item" style="background-image: url(img/item_literature.jpg)">
 
-                <span class="rubric">література</span>
-                <h1>Художня література XX століття</h1>
-                <span class="quastions"> 5 запитань</span>
-                <span class="quastions-type">
-                  <span class="glyphicon glyphicon-th-large"></span>
-                </span>
-            </div>
-          </a>
-        </div>
-
-
-        <div class="col-lg-4 col-sm-6 block">
-          <div class="item"></div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6 block">
-          <div class="item"></div>
-        </div>
-        <div class="col-lg-4 col-sm-6 block">
-          <div class="item"></div>
-        </div>
-        <div class="col-lg-4 col-sm-6 block">
-          <div class="item"></div>
-        </div>
-
-        <div class="col-lg-4 col-sm-6 block">
-          <div class="item"></div>
-        </div>
-        <div class="col-lg-4 col-sm-6 block">
-          <div class="item"></div>
-        </div>
-        <div class="col-lg-4 col-sm-6 block">
-          <div class="item"></div>
-        </div>
       </div> <!-- row -->
     </div> <!-- container -->
   </div> <!-- page-wrap-->
@@ -97,6 +60,8 @@
   </footer>
 
 
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
   <!-- Jquery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
