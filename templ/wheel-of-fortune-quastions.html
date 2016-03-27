@@ -1,0 +1,19 @@
+<div class="block-quastion">
+  <h1><%= quastion %></h1>
+</div>
+<div id="options" class="block-options">
+  <div class="block-letters">
+    <% _.each(answ, function(option, iterator){%>
+    <div class="card-wrap">
+      <div id="card" class="card-block">
+        <div class="front-side">?</div>
+        <div class="back-side"><%= option %></div>
+      </div>
+    </div>
+    <%})%>
+  </div>
+  <div class="form-group wheel-answer">
+    <input type="text" class="form-control check-answer" placeholder="answer">
+  </div>
+</div>
+<div class="next-button"><a href="#"><span>next</span></a></div>
