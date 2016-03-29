@@ -1,19 +1,18 @@
-angular.module('myApp', []).controller('namesCtrl', function($scope) {
-  $scope.names = [
+var mainPage = [
     {
       h1: 'The Beatles: найвідоміший гурт в історії людства',
       rubric: 'музика',
       quastions: '7 запитань',
       image: 'img/item_music.jpg',
-      url: 'simple-test.html',
-      type: 'glyphicon glyphicon-check',
+      url: 'simple-test_Beatles.html',
+      type: 'glyphicon glyphicon-check'
     },
     {
       h1: 'Художня література XX століття',
       rubric: 'література',
       quastions: '5 запитань',
       image: 'img/item_literature.jpg',
-      url: 'wheel-of-fortune.html',
+      url: 'wheel-of-fortune_LiteratureXX.html',
       type: 'glyphicon glyphicon-stop'
     },
     'temp1',
@@ -21,7 +20,9 @@ angular.module('myApp', []).controller('namesCtrl', function($scope) {
     'temp3',
     'temp4',
     'temp5',
-    'temp6',
-    'temp7'
+    'temp6'
   ];
+
+angular.module('myApp', []).controller('namesCtrl', function($scope) {
+  $scope.names = mainPage;
 });

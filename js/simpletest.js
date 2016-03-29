@@ -1,5 +1,5 @@
 $.when(
-  $.getJSON("api/simple-test_Beatles.json"), // get json with quastions
+  $.getJSON(quizData), // get json with quastions
   $.get("templ/simple-test-quastions.html"), // get template with quastions page
   $.ajax("templ/simple-test-final.html") // get template with final page
   )

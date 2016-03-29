@@ -1,5 +1,5 @@
 $.when(
-  $.getJSON("api/wheel-of-fortune_LiteratureXX.json"), // get json with quastions
+  $.getJSON(quizData), // get json with quastions
   $.get("templ/wheel-of-fortune-quastions.html"), // get template with quastions page
   $.get("templ/wheel-of-fortune-final.html") // get template with final page
   )
