@@ -54,8 +54,8 @@ function renderPage(DataRequest, qTmplRequest, finTmplRequest) {
     var correctX = quastions[quastionCounter].correct[0];
     var correctY = quastions[quastionCounter].correct[1];
     choiceCounter++;
-    var acceptedX = userX < correctX + 1 && userX > correctX - 1;
-    var acceptedY = userY < correctY + 1 && userY > correctY - 1;
+    var acceptedX = userX < correctX + 2.6 && userX > correctX - 2.6;
+    var acceptedY = userY < correctY + 2.6 && userY > correctY - 2.6;
 
     $('#map').append('<div class="location"></div>' );
     $('.location').css({"left": correctX+"%", "top": correctY+"%"});
