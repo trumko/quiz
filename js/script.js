@@ -15,12 +15,19 @@ var mainPage = [
       url: 'wheel-of-fortune_LiteratureXX.html',
       type: 'glyphicon glyphicon-stop'
     },
+    {
+      h1: 'Столиці світу',
+      rubric: 'географія',
+      quastions: '6 запитань',
+      image: 'img/item_capitals.jpg',
+      url: 'map-test_capital.html',
+      type: 'glyphicon glyphicon-screenshot'
+    },
     'temp1',
     'temp2',
     'temp3',
     'temp4',
-    'temp5',
-    'temp6'
+    'temp5'
   ];
 
 angular.module('myApp', []).controller('namesCtrl', function($scope) {

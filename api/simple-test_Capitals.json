@@ -1,0 +1,56 @@
+[
+  {
+    "quastion": "Де знаходиться столиця Іспанії - Мадрид?",
+    "map": "img/map-capitals/europe.jpg",
+    "scale": 38,
+    "correct": [
+    13.3,
+    79.71
+    ]
+  },
+  {
+    "quastion": "Де знаходиться столиця Гондурасу - Тегусігальпа?",
+    "map": "img/map-capitals/america.jpg",
+    "scale": 38,
+    "correct": [
+    60,
+    69.3
+    ]
+  },
+  {
+    "quastion": "Де знаходиться столиця Пн. Кореї - Пхеньян?",
+    "map": "img/map-capitals/east-asia.jpg",
+    "scale": 38,
+    "correct": [
+    46.7,
+    47.9
+    ]
+  },
+  {
+    "quastion": "Де знаходиться столиця Данії - Копенгаген?",
+    "map": "img/map-capitals/north-europe.jpg",
+    "scale": 38,
+    "correct": [
+    37.9,
+    74.3
+    ]
+  },
+  {
+    "quastion": "Де знаходиться столиця Папуа Нової Гвінеї - Порт-Морсбі?",
+    "map": "img/map-capitals/australia.jpg",
+    "scale": 38,
+    "correct": [
+    85.45,
+    60.6
+    ]
+  },
+  {
+    "quastion": "Де знаходиться столиця Польщі - Варшава?",
+    "map": "img/map-capitals/europe.jpg",
+    "scale": 38,
+    "correct": [
+    60.45,
+    30.66
+    ]
+  }
+]

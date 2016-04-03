@@ -1,0 +1,107 @@
+.body-quiz {
+  max-width: 780px;
+  background-color: #F2F2F2;
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.3);
+}
+
+.block-options {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 0px rgba(92,92,92,.5);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.block-options img {
+  width: 100%;
+}
+
+.final-info {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 0px rgba(92,92,92,.5);
+  padding: 100px 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.block-quastion {
+  width: 100%;
+  background: #a0a384;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.block-quastion h1 {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.next-button {
+  text-align: center;
+}
+
+.next-button span{
+  border: 3px solid #a0a384;
+  padding: 8px 30px 12px;
+  color: #a0a384;
+  font-size: 25px;
+  text-align: center;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+
+#map {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.location {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: -20px;
+  top: -20px;
+  margin-left: -20px;
+  margin-top: -20px;
+  border: #fff 2px solid;
+  border-radius: 100%;
+  background-color: rgba(113,224,139,.3);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
+
+}
+
+.info {
+  position: absolute;
+  width: 100%;
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+  font-size: 26px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .9);
+  top: 0%;
+  animation-name: info-pos;
+  animation-duration: .3s;
+}
+
+@keyframes info-pos {
+    from {top: -10%;}
+    to {top: 0%;}
+}
+
+.info-false {
+  background-color: rgba(224,113,113,.9);
+}
+
+.info-true {
+  background-color: rgba(113,224,139,.9);
+}
