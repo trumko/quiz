@@ -15,7 +15,7 @@ when server is running, please run command:
 ```sh
 lt -p 8080 -s quiz
 ```
-your internet link will apper in your command prompt(normally it should be https://quiz.localtunnel.me)
+your internet link will apper in your command prompt (normally it should be https://quiz.localtunnel.me)
 
 for more info - please check [localtunnel].
 
