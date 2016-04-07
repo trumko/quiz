@@ -1,0 +1,111 @@
+[
+	{
+		"url": "img/guessPicture/Depp.jpg",
+		"variants":[
+			"Леонардо Ді Капріо",
+			"Бред Пітт",
+			"Джон Ледженд",
+			"Джонні Депп"
+		],
+		"correct": "3"
+	},
+
+	{
+		"url": "img/guessPicture/Leo.jpg",
+		"variants": [
+			"Леонардо Ді Капріо",
+			"Джонні Депп",
+			"Девід Бекхем",
+			"Девід Боуі"
+		],
+		"correct": "0"
+	},
+
+	{
+		"url": "img/guessPicture/Pitt.jpg",
+		"variants": [
+			"Джонні Карсон",
+			"Бред Пітт",
+			"Віктор Цой",
+			"Дольф Лундгрен"
+		],
+		"correct": "1"
+	},
+
+	{
+		"url": "img/guessPicture/bellucci.jpg",
+		"variants": [
+			"Вікторія Бекхем",
+			"Алла Пугачова",
+			"Анджеліна Джолі",
+			"Моніка Белучі"
+		],
+		"correct": "3"
+	},
+
+	{
+		"url": "img/guessPicture/brando.jpg",
+		"variants": [
+			"Олівер Твіст",
+			"Джеймс Браун",
+			"Марлон Брандо",
+			"Домінік Торетто"
+		],
+		"correct": "2"
+	},
+
+	{
+		"url": "img/guessPicture/johanson.jpg",
+		"variants": [
+			"Лоліта",
+			"Амаля Мордвинова",
+			"Шарліз Терон",
+			"Скарлет Йохансон"
+		],
+		"correct": "3"
+	},
+
+	{
+		"url": "img/guessPicture/kudlay.jpg",
+		"variants": [
+			"Алла Кудлай",
+			"Анжеліка Рудницька",
+			"Іво Бобул",
+			"Софія Ротару"
+		],
+		"correct": "0"
+	},
+
+	{
+		"url": "img/guessPicture/mcconaughey.jpg",
+		"variants": [
+			"Донні Браско",
+			"Джон Ділінджер",
+			"Метью Макконагі",
+			"Аль Пачіно"
+		],
+		"correct": "2"
+	},
+
+	{
+		"url": "img/guessPicture/sher.jpg",
+		"variants": [
+			"Фіона",
+			"Шрек",
+			"Шер",
+			"Таісія Повалій"
+		],
+		"correct": "2"
+	},
+
+	{
+		"url": "img/guessPicture/spears.jpg",
+		"variants": [
+			"Вікторія Бекхем",
+			"Лада Денс",
+			"Брітні Спірс",
+			"Регіна Дубовицька"
+		],
+		"correct": "2"
+	}
+]

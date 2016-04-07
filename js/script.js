@@ -39,7 +39,14 @@ var mainPage = [
       url: 'simple-test_first-world-war.html',
       type: 'glyphicon glyphicon-check'
     },
-    'temp2',
+    {
+      h1: 'Вгадай селебріті на фото',
+      rubric: 'Медіа',
+      quastions: '10 запитань',
+      image: 'img/guessPicture.jpg',
+      url: 'guessPicture.html',
+      type: 'glyphicon glyphicon-check'
+    },
     'temp3',
     'temp4'
   ];

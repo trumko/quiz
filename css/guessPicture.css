@@ -1,0 +1,171 @@
+/* C O M M O N ********************** */
+body {
+  background: #EDECE3;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* H E A D E R ******************* */
+
+.logo {
+  text-align: center;
+  margin: 0 auto 20px;
+}
+
+.logo img {
+  max-width: 250px;
+}
+
+/* M A I N ******************** */
+.img-wrapper{
+  perspective: 300px;
+  height:283px;  
+}
+
+img#picture{
+	max-width:283px;
+	display:block;
+	margin:0 auto;
+	box-shadow: 0px 0px 15px rgba(0,0,0,.5);
+	border-radius: 10px;
+  margin-bottom:15px;
+  animation:spin .6s ease-out;
+}
+@keyframes spin{
+  from{
+    max-width:260px;
+    max-height:260px;
+  }
+  to{
+    max-width:283px;
+    max-height:283px;
+  }
+}
+
+.question{
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background: #F9F4CD;
+  padding-bottom:30px;
+}
+
+.h1-question{
+  box-shadow: 0px 0px 15px rgba(0,0,0,.3);
+  margin: 15px;
+  border-radius: 5px;
+  background: #a0a384;
+	color: #fff;
+  font-size: 35px;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.variants{
+	background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,.5);
+  padding: 10px;
+  text-align: left;
+}
+
+.variants span{
+	display: block;
+	font-size:18px;
+	background:#F2F2F2;
+	border: solid 1px #CECECE;
+	padding: 10px 10px 10px 50px;
+	margin: 15px;
+	cursor: pointer;
+}
+
+.variants span:hover{
+	background:#FFFFDA;
+}
+
+.variants span.correct{
+  background: rgb(113, 224, 139);
+}
+
+.variants span.incorrect{
+  background: rgb(224, 113, 113);
+}
+
+
+.score{
+	text-align: center;
+	color:#FF6804;
+	font-size:35px;
+  font-weight:bold;
+  text-shadow: 0 0 15px rgba(255, 8, 7, 0.41);
+  padding: 5px;
+}
+
+.finish{
+  color:#fff;
+  text-shadow: 0 0 15px rgba(0,0,0,.5);
+  text-align: center;
+  font-size: 30px;
+  background: url('../img/guessPicture/sosedov.png') no-repeat center center;
+  background-size:cover;
+  padding: 150px 50px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,.5);
+}
+
+.next-container{
+  text-align:center;
+}
+.next{
+	cursor:pointer;
+	border: 3px solid #a0a384;
+  padding: 8px 25px 8px;
+  color: #a0a384;
+  line-height: 25px;
+  font-size: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top:15px;
+  margin-bottom:10px;
+  box-shadow:  0 3px 10px rgba(255,255,255,.5) inset,0 -1px 3px rgba(0,0,0,.3) inset;
+}
+
+.next:active{
+  box-shadow:  0 -3px 10px rgba(255,255,255,.5) inset,0 1px 3px rgba(0,0,0,.3) inset;
+}
+
+/* sticky F O O T E R ********************* */
+
+.page-wrap {
+  min-height: 100vh;
+  padding-top:10px;
+  /* equal to footer height */
+}
+
+.page-wrap::after {
+  content: "";
+  display: block;
+  height:0;
+  visibility:hidden;
+  clear:both;
+}
+
+.footer, .page-wrap::after {
+  height: 60px; 
+  clear:both;
+}
+
+.footer {
+  background-color: #b5b6a3;
+}
+
+.footer p {
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  margin: 0;
+}
