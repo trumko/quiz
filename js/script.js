@@ -8,9 +8,9 @@ var mainPage = [
       type: 'glyphicon glyphicon-check'
     },
     {
-      h1: 'Художня література XX століття',
+      h1: 'Художня література XX-XXI століть',
       rubric: 'література',
-      quastions: '5 запитань',
+      quastions: '6 запитань',
       image: 'img/item_literature.jpg',
       url: 'wheel-of-fortune_LiteratureXX.html',
       type: 'glyphicon glyphicon-stop'
@@ -41,7 +41,7 @@ var mainPage = [
     },
     {
       h1: 'Вгадай селебріті на фото',
-      rubric: 'Медіа',
+      rubric: 'медіа',
       quastions: '10 запитань',
       image: 'img/guessPicture.jpg',
       url: 'guessPicture.html',

@@ -42,6 +42,7 @@
   text-align: center;
   padding: 20px;
   margin: 0;
+  line-height: 1.2;
 }
 
 .next-button {
@@ -56,6 +57,11 @@
   text-align: center;
   border-radius: 5px;
   display: inline-block;
+}
+
+.next-button span:hover{
+  color: #BFC39C;
+  border-color: #BFC39C;
 }
 
 
@@ -104,4 +110,63 @@
 
 .info-true {
   background-color: rgba(113,224,139,.9);
+}
+
+
+/* MEDIA */
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .info {
+    padding: 5px;
+    font-size: 20px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+  .body-quiz {
+    padding: 10px 5px;
+  }
+
+  .block-quastion h1 {
+  font-size: 18px;
+  padding: 10px 5px;
+  }
+
+  .block-options li {
+    margin: 10px 0;
+    padding: 10px 10px 10px 50px;
+    font-size: 14px;
+  }
+
+  .block-options .glyphicon {
+    font-size: 14px;
+    top: 12px;
+  }
+
+  .next-button span {
+    border: 2px solid #a0a384;
+    padding: 5px 25px 8px;
+    font-size: 16px;
+  }
+
+  .final-info {
+    font-size: 16px;
+  }
+
+  .info {
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .location {
+    width: 20px;
+    height: 20px;
+    left: -10px;
+    top: -10px;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: #fff 1px solid;
+  }
 }

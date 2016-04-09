@@ -10,9 +10,12 @@ $.when(
 
 function renderPage(DataRequest, qTmplRequest, finTmplRequest) {
 
-  var quastions = DataRequest[0]; // data from parsed JSON
+  var quastions = DataRequest[0][0]; // quastion from parsed JSON
+  var analytics = DataRequest[0][1]; // analytics from parsed JSON
   var qTmpl = qTmplRequest[0];  // template with quastions page
   var finTmpl = finTmplRequest[0];  // template with final page
+
+console.log(analytics[3])
 
   var simpleQuiz = $('#simple-quiz'); // container for rendered info
   var quastionCounter = 0; // number of current quastion
@@ -34,9 +37,29 @@ function renderPage(DataRequest, qTmplRequest, finTmplRequest) {
   function renderFinalPage(template, arr) {
     var info = template({ 
                         result: correctAnswers,
-                        totalQuastion: arr.length
+                        totalQuastion: arr.length,
+                        percent: Math.round(correctAnswers / quastions.length * 100),
+                        summary: getSummary()
                        });
     $('#simple-quiz').html(info);
+  }
+
+  function getSummary() {
+    var percentage = Math.round(correctAnswers / quastions.length * 100);
+    switch (true) {
+      case (percentage < 25):
+        return analytics[0]
+        break
+      case (percentage < 50):
+        return analytics[1]
+        break
+      case (percentage < 75):
+        return analytics[2]
+        break
+      default:
+        return analytics[3]
+    }
+
   }
 
   // event function when click option
@@ -61,6 +84,14 @@ function renderPage(DataRequest, qTmplRequest, finTmplRequest) {
     $( "#simple-quiz").undelegate( '#options li', 'click', optionChooseEvent); //undelegate event
   }
 
+  function renderBar() {
+    console.log(5);
+    var percent = Math.round(correctAnswers / quastions.length * 100);
+    console.log(percent)
+    $(".prog-result").width(percent + "%");
+    $(".percent").css("margin-top", 0 + "px");
+  }
+
   // event function when click next button
   function nextPageEvent() {
     quastionCounter++;
@@ -71,6 +102,7 @@ function renderPage(DataRequest, qTmplRequest, finTmplRequest) {
       renderQuastionPage(quastionPageTmpl, quastions, quastionCounter);
     } else {
       renderFinalPage(finalnPageTmpl, quastions);
+      renderBar();
     }
   }
 

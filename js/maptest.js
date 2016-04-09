@@ -37,9 +37,16 @@ function renderPage(DataRequest, qTmplRequest, finTmplRequest) {
     var info = template({ 
                         result: correctAnswers,
                         totalQuastion: arr.length,
-                        avarageKm: Math.round(totalKmFault / choiceCounter)
+                        avarageKm: calcAvarageKm()
                        });
     $('#simple-quiz').html(info);
+  }
+
+  function calcAvarageKm() {
+    if (totalKmFault === 0) {
+      return 0;
+    };
+    return Math.round(totalKmFault / choiceCounter)
   }
 
 

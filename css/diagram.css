@@ -1,0 +1,32 @@
+.prog-bg {
+  background: #F5F5F5;
+  border: solid 1px #CECECE;
+  font-size: 20px;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.prog-result {
+  background: #A0A384;
+  width: 0%;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  min-width: 1%;
+  transition: width 2s;
+  position: absolute;
+}
+
+.percent {
+  font-size: 25px;
+  line-height: 50px;
+  display: block;
+  margin-top: -50px;
+  transition: margin-top 1s;
+  position: relative;
+  z-index: 3;
+}

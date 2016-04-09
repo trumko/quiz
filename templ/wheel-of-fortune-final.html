@@ -1,5 +1,12 @@
 <div class="final-info">
-  <span>Ви дали <%= result %> з <%= totalQuastion %> правильних відповідей і скористались <%= usedHints %> підказками</span>
+
+  <div class="prog-bg">
+    <div class="prog-result">
+    </div>
+    <span class="percent"><%= percent %>%</span>
+  </div>
+
+  <span>Ви дали <strong><%= result %></strong> з <strong><%= totalQuastion %></strong> правильних відповідей і скористались <strong><%= usedHints %></strong> підказками. <%= summary %></span>
 </div>
 <div class="next-button">
   <a href="index.html"><span>back to main page</span></a>
