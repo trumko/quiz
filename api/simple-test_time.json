@@ -1,0 +1,68 @@
+[
+  [{
+      "quastion": "Які конструкції циклів є в JavaScript?",
+      "option": [
+        "Тільки дві: <code>for</code> і <code>while</code>",
+        "Тільки одна: <code>for</code>",
+        "Три: <code>for</code>, <code>while</code> і <code>do...while</code>"
+      ],
+      "correct": 2
+    },
+    {
+      "quastion": "Який результат виконання такого коду <code>true + false</code> ?",
+      "option": [
+        "<code>0</code>",
+        "<code>1</code>",
+        "<code>NaN</code>",
+        "<code>truefalse</code>"
+      ],
+      "correct": 1
+    },
+    {
+      "quastion": "Чему равно <code>0 || 1 && 2 || 3</code> ?",
+      "option": [
+        "<code>0</code>",
+        "<code>1</code>",
+        "<code>2</code>",
+        "<code>3</code>",
+        "<code>true</code>"
+      ],
+      "correct": 2
+    },
+    {
+      "quastion": "Чому дорівнюватиме сумма <code>[] + 1 + 2</code> ?",
+      "option": [
+        "<code>1</code>",
+        "<code>3</code>",
+        "<code>\"12\"</code>",
+        "<code>NaN</code>"
+      ],
+      "correct": 2
+    },
+    {
+      "quastion": "Чому дорівнює довжина масиву: <br> <code>var arr = []; arr[3] = 33</code> ?",
+      "option": [
+        "0",
+        "1",
+        "3",
+        "4"
+      ],
+      "correct": 3
+    },
+    {
+      "quastion": "Чи є різниця між викликами <code>i++</code> і <code>++i</code>?",
+      "option": [
+        "Різниця у значенні, яке повертає такий виклик",
+        "Різниця у значенні <code>i</code> після виклику",
+        "Немає різниці"
+      ],
+      "correct": 0
+    }],
+    [
+        "Вам необхідно вичити основи JavaScript перед тим як братись за щось складніше",
+        "Вам потрібно ще раз повторити основи JavaScript",
+        "Ви знаєте основи JavaScript, але деякі особливості цієї мови програмування залишились поза вашою увагою",
+        "Ви знаєте основи JavaScript і, здається, настав час взятись за складніші та цікавіші речі"
+    ],
+    [30]
+]

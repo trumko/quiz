@@ -37,6 +37,7 @@ function renderPage(DataRequest, qTmplRequest, finTmplRequest) {
     var info = template({ 
                         result: correctAnswers,
                         totalQuastion: arr.length,
+                        percent: Math.round(correctAnswers / quastions.length * 100),
                         avarageKm: calcAvarageKm()
                        });
     $('#simple-quiz').html(info);
@@ -78,13 +79,23 @@ function renderPage(DataRequest, qTmplRequest, finTmplRequest) {
     };
   }
 
+  function renderBar() {
+    console.log(5);
+    var percent = Math.round(correctAnswers / quastions.length * 100);
+    console.log(percent)
+    $(".prog-result").width(percent + "%");
+    $(".percent").css("margin-top", 0 + "px");
+  }
+
   // event function when click next button
   function nextPageEvent() {
+  $( "#simple-quiz").undelegate( '#map', 'click', getClickPosition);
     quastionCounter++;
     if (quastionCounter < quastions.length) {
       renderQuastionPage(quastionPageTmpl, quastions, quastionCounter);
     } else {
       renderFinalPage(finalnPageTmpl, quastions);
+      renderBar()
     }
     $( "#simple-quiz").delegate( '#map', 'click', getClickPosition);
   }

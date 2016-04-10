@@ -1,7 +1,7 @@
 $.when(
   $.getJSON(quizData), // get json with quastions
-  $.get("templ/simple-test-quastions.html"), // get template with quastions page
-  $.ajax("templ/simple-test-final.html") // get template with final page
+  $.get("templ/time-test-quastions.html"), // get template with quastions page
+  $.ajax("templ/time-test-final.html") // get template with final page
   )
   .then(renderPage)
   .fail(function(){console.log("Error");
@@ -14,8 +14,9 @@ function renderPage(DataRequest, qTmplRequest, finTmplRequest) {
   var analytics = DataRequest[0][1]; // analytics from parsed JSON
   var qTmpl = qTmplRequest[0];  // template with quastions page
   var finTmpl = finTmplRequest[0];  // template with final page
+  var time = DataRequest[0][2];
+  console.log(time);
 
-console.log(analytics[3])
 
   var simpleQuiz = $('#simple-quiz'); // container for rendered info
   var quastionCounter = 0; // number of current quastion
@@ -31,6 +32,24 @@ console.log(analytics[3])
                         options: arr[index].option
                        });
     $('#simple-quiz').html(info);
+    timer();
+  }
+
+  var mainTimeOut;
+
+  function timer() {
+    setTimeout( function(){
+      $(".time-slider").css({"left": "0%", "transition": "left " +  time[0] + "s linear"});
+      $(".time-remainder").css({"width": "0%", "transition": "width " +  time[0] + "s linear"});
+    }, 1000);
+
+    mainTimeOut = setTimeout( function(){
+      $("#" + quastions[quastionCounter].correct).removeClass('option-not-active').addClass('option-correct'); //make it green
+      $("#" + quastions[quastionCounter].correct).children("span").removeClass('glyphicon-unchecked').addClass('glyphicon-ok');
+      $("#" + quastions[quastionCounter].correct).siblings().addClass('option-not-active'); //make other options not active
+      $( "#simple-quiz").undelegate( '#options li', 'click', optionChooseEvent); //undelegate event
+    }, (time[0]*1000 + 1000));
+
   }
 
   // render function for final page
@@ -64,21 +83,23 @@ console.log(analytics[3])
 
   // event function when click option
   function optionChooseEvent() {
+    $(".time-bar").css({"visibility": "hidden"});
+    clearTimeout(mainTimeOut);
 
     var optionId = ( ($(this).attr('id')) ); // ID that is clicked on
 
     if (optionId == quastions[quastionCounter].correct) {
       $(this).addClass('option-correct'); //make it green
-      $(this).children().removeClass('glyphicon-unchecked').addClass('glyphicon-ok'); //change icon;
+      $(this).children("span").removeClass('glyphicon-unchecked').addClass('glyphicon-ok'); //change icon;
       $(this).siblings().addClass('option-not-active'); //make other options not active
       correctAnswers++;
       console.log(correctAnswers);
     } else {
       $(this).addClass('option-wrong');
       $(this).siblings().addClass('option-not-active'); //make other options not active
-      $(this).children().removeClass('glyphicon-unchecked').addClass('glyphicon-remove');
+      $(this).children("span").removeClass('glyphicon-unchecked').addClass('glyphicon-remove');
       $("#" + quastions[quastionCounter].correct).removeClass('option-not-active').addClass('option-correct'); //make it green
-      $("#" + quastions[quastionCounter].correct).children().removeClass('glyphicon-unchecked').addClass('glyphicon-ok');
+      $("#" + quastions[quastionCounter].correct).children("span").removeClass('glyphicon-unchecked').addClass('glyphicon-ok');
     }
 
     $( "#simple-quiz").undelegate( '#options li', 'click', optionChooseEvent); //undelegate event
@@ -94,6 +115,7 @@ console.log(analytics[3])
 
   // event function when click next button
   function nextPageEvent() {
+    clearTimeout(mainTimeOut);
     $( "#simple-quiz").undelegate( '#options li', 'click', optionChooseEvent); //undelegate event
     quastionCounter++;
     if (quastionCounter < quastions.length) {

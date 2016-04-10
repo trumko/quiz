@@ -47,7 +47,14 @@ var mainPage = [
       url: 'guessPicture.html',
       type: 'glyphicon glyphicon-check'
     },
-    'temp3',
+    {
+      h1: 'Основи JavaScript',
+      rubric: 'IT',
+      quastions: '6 запитань',
+      image: 'img/item_js-code.jpg',
+      url: 'time-test_test.html',
+      type: 'glyphicon glyphicon-time'
+    },
     'temp4'
   ];
 
